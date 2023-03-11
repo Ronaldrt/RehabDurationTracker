@@ -12,6 +12,8 @@ public class AppMain extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AppMain.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 300);
+        var hController = new AppController();
+        fxmlLoader.setController(hController);
         stage.setTitle("Rehabilitation duration tracker");
         stage.setScene(scene);
         stage.show();
@@ -20,17 +22,8 @@ public class AppMain extends Application {
     }
 
 
-
-
-
     public static void main(String[] args) {
-        PatientDao patientDao = new PatientDao();
-        Patient patient = new Patient(75, 'M', "stroke", "05-02-2023", 21);
-        Patient patient2 = new Patient(35, 'M', "humerus fracture", "06-03-2023", 14);
-        patientDao.addPatient(patient);
-        patientDao.addPatient(patient2);
-
-
+        launch();
 
     }
 }

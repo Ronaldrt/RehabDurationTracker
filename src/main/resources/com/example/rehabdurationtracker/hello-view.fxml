@@ -18,7 +18,7 @@
                   <TextField fx:id="primaryDiagnosis" layoutX="175.0" layoutY="101.0" promptText="Primary diagnosis" />
                   <TextField fx:id="timeOfAdmission" layoutX="175.0" layoutY="136.0" promptText="Time of admission" />
                   <TextField fx:id="durationOfRehab" layoutX="175.0" layoutY="172.0" promptText="Initial duration of rehab" />
-                  <Button fx:id="addPatient" layoutX="210.0" layoutY="214.0" mnemonicParsing="false" text="Add patient" />
+                  <Button fx:id="addPatient" layoutX="210.0" layoutY="214.0" mnemonicParsing="false" onAction="#onButtonClick" text="Add patient" />
                </children></AnchorPane>
       </content>
     </Tab>

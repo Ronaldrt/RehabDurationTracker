@@ -5,7 +5,7 @@ import org.hibernate.Transaction;
 
 public class PatientDao {
 
-    public void addPatient(Patient patient){
+    public void addPatientToDatabase(Patient patient){
         Transaction transaction = null;
 
         try(Session session = HibernateUtil.getSessionFactory().openSession()){
@@ -15,7 +15,6 @@ public class PatientDao {
         }catch(Exception e){
             if(transaction != null){
                 transaction.rollback();
-
             }
         }
     }
