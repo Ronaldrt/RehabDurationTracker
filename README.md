@@ -3,7 +3,7 @@
 Launch procedure:
 1) Clone git repository: https://github.com/Ronaldrt/RehabDurationTracker.git
 2) Open the project in your preferred IDE (ex. IntelliJ/Eclipse)
-3) Open MySQL Workbench and create a new schema named "rehabdurationtracker"
+3) Install MySQL. Open MySQL Workbench and create a new schema named "rehabdurationtracker"
 4) In the Java project, change the username and password to correspond with your MySQL database:
    (Java class HibernateUtil -> settings.put(Environment.USER, "username");settings.put(Environment.PASS, "password");
 5) Run the program
