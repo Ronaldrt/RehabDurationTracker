@@ -14,7 +14,7 @@ Current features:
    Initial duration of rehab field should be 10, 14 or 21 (in a real world scenario)
    
 To be implemented:
-1) Database query logic
+1) Database query logic and GUI
 2) Make Gender and Initial duration of rehab fields a drop down menu or checkable boxes with given values.
 3) Implement logic for querying the remaining time of rehab for a single patient or all patients in the database.
 
