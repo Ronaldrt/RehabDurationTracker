@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
@@ -22,9 +25,26 @@
                </children></AnchorPane>
       </content>
     </Tab>
+      <Tab text="Delete patient">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="insertIdDelete" layoutX="176.0" layoutY="60.0" promptText="Insert patient ID" />
+                  <Button fx:id="deletePatientById" layoutX="205.0" layoutY="110.0" mnemonicParsing="false" onAction="#deleteButtonClick" text="Delete patient" />
+                  <Label fx:id="deletedPatientDisplay" layoutX="213.0" layoutY="173.0" prefHeight="18.0" prefWidth="74.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
     <Tab text="Get data">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="searchById" layoutX="24.0" layoutY="53.0" promptText="Insert patient ID" />
+                  <Button fx:id="getPatientFromDb" layoutX="61.0" layoutY="94.0" mnemonicParsing="false" text="Get patient" />
+                  <ListView fx:id="listOfPatients" layoutX="185.0" layoutY="2.0" prefHeight="268.0" prefWidth="312.0" />
+                  <Separator layoutX="182.0" orientation="VERTICAL" prefHeight="272.0" prefWidth="6.0" />
+               </children></AnchorPane>
       </content>
     </Tab>
   </tabs>

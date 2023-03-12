@@ -5,8 +5,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import org.hibernate.SessionFactory;
+import org.w3c.dom.Text;
 
 public class AppController{
     private SessionFactory session;
@@ -27,6 +30,24 @@ public class AppController{
 
     @FXML
     private Button addPatient;
+
+    @FXML
+    private TextField insertIdDelete;
+
+    @FXML
+    private Button deletePatientById;
+
+    @FXML
+    private Label deletedPatientDisplay;
+
+    @FXML
+    private TextField searchById;
+
+    @FXML
+    private Button getPatientFromDb;
+
+    @FXML
+    private ListView listOfPatients;
 
 
     public void setSession(SessionFactory session) {
@@ -52,5 +73,19 @@ public class AppController{
             }
         });
     }
+
+    public void deleteButtonClick(){
+        deletePatientById.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                PatientDao patientDao = new PatientDao();
+                patientDao.deletePatient(Integer.parseInt(insertIdDelete.getText()));
+                deletedPatientDisplay.setText("Patient " + insertIdDelete.getText() + " is deleted!");
+            }
+        });
+    }
+
+
+
 
 }
