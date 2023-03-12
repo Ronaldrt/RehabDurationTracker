@@ -9,4 +9,4 @@ target/
 *.iml
 *.ipr
 
-src/main/java/com/example/rehabdurationtracker/Credentials.java
+src/main/java/com/example/rehabdurationtracker/Data/Credentials.java
