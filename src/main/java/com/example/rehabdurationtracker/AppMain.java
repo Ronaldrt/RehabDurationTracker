@@ -1,5 +1,6 @@
 package com.example.rehabdurationtracker;
 
+import com.example.rehabdurationtracker.Logic.AppController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,9 +19,7 @@ public class AppMain extends Application {
         stage.setScene(scene);
         stage.show();
 
-
     }
-
 
     public static void main(String[] args) {
         launch();

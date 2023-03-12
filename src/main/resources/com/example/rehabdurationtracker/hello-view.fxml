@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rehabdurationtracker.AppController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rehabdurationtracker.Logic.AppController">
   
   <tabs>
     <Tab text="Add patient">
@@ -14,11 +14,11 @@
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <TextField fx:id="age" layoutX="175.0" layoutY="32.0" promptText="Age" />
-                  <TextField fx:id="gender" layoutX="175.0" layoutY="66.0" promptText="Gender" />
                   <TextField fx:id="primaryDiagnosis" layoutX="175.0" layoutY="101.0" promptText="Primary diagnosis" />
                   <TextField fx:id="timeOfAdmission" layoutX="175.0" layoutY="136.0" promptText="Time of admission" />
                   <TextField fx:id="durationOfRehab" layoutX="175.0" layoutY="172.0" promptText="Initial duration of rehab" />
                   <Button fx:id="addPatient" layoutX="210.0" layoutY="214.0" mnemonicParsing="false" onAction="#onButtonClick" text="Add patient" />
+                  <TextField fx:id="gender" layoutX="175.0" layoutY="68.0" promptText="Gender" />
                </children></AnchorPane>
       </content>
     </Tab>

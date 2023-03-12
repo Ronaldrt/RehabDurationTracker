@@ -1,5 +1,7 @@
-package com.example.rehabdurationtracker;
+package com.example.rehabdurationtracker.Logic;
 
+import com.example.rehabdurationtracker.Data.HibernateUtil;
+import com.example.rehabdurationtracker.Data.Patient;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

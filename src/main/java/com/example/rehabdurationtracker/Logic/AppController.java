@@ -1,5 +1,6 @@
-package com.example.rehabdurationtracker;
+package com.example.rehabdurationtracker.Logic;
 
+import com.example.rehabdurationtracker.Data.Patient;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -11,8 +12,12 @@ public class AppController{
     private SessionFactory session;
     @FXML
     private TextField age;
+
+
+    //new ChoiceBox(FXCollections.observableArrayList("M", "F"));
     @FXML
     private TextField gender;
+
     @FXML
     private TextField primaryDiagnosis;
     @FXML

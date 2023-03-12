@@ -1,4 +1,4 @@
-package com.example.rehabdurationtracker;
+package com.example.rehabdurationtracker.Data;
 
 import java.util.Properties;
 
