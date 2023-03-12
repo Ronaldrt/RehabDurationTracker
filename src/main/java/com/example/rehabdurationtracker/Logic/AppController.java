@@ -1,5 +1,6 @@
-package com.example.rehabdurationtracker;
+package com.example.rehabdurationtracker.Logic;
 
+import com.example.rehabdurationtracker.Data.Patient;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;

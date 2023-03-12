@@ -1,5 +1,6 @@
 package com.example.rehabdurationtracker;
 
+import com.example.rehabdurationtracker.Logic.AppController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

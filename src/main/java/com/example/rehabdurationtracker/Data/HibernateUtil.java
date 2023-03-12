@@ -1,4 +1,4 @@
-package com.example.rehabdurationtracker;
+package com.example.rehabdurationtracker.Data;
 
 import java.util.Properties;
 
@@ -20,8 +20,8 @@ public class HibernateUtil {
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
                 settings.put(Environment.URL, "jdbc:mysql://localhost:3306/rehabdurationtracker");
-                settings.put(Environment.USER, Credentials.DB_USER_NAME);
-                settings.put(Environment.PASS, Credentials.DB_PASSWORD);
+                settings.put(Environment.USER, "root");
+                settings.put(Environment.PASS, "lammas23");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
 
                 settings.put(Environment.SHOW_SQL, "true");
