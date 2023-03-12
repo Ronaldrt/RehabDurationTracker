@@ -31,7 +31,7 @@
                <children>
                   <TextField fx:id="insertIdDelete" layoutX="176.0" layoutY="60.0" promptText="Insert patient ID" />
                   <Button fx:id="deletePatientById" layoutX="205.0" layoutY="110.0" mnemonicParsing="false" onAction="#deleteButtonClick" text="Delete patient" />
-                  <Label fx:id="deletedPatientDisplay" layoutX="213.0" layoutY="173.0" prefHeight="18.0" prefWidth="74.0" />
+                  <Label fx:id="deletedPatientDisplay" alignment="CENTER" layoutX="78.0" layoutY="168.0" prefHeight="18.0" prefWidth="344.0" textAlignment="CENTER" />
                </children>
             </AnchorPane>
         </content>
