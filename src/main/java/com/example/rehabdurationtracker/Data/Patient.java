@@ -87,5 +87,17 @@ public class Patient {
     public void setDurationOfRehab(int durationOfRehab) {
         this.durationOfRehab = durationOfRehab;
     }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "id=" + id +
+                ", age=" + age +
+                ", gender=" + gender +
+                ", primaryDiagnosis='" + primaryDiagnosis + '\'' +
+                ", timeOfAdmission='" + timeOfAdmission + '\'' +
+                ", durationOfRehab=" + durationOfRehab +
+                '}';
+    }
 }
 

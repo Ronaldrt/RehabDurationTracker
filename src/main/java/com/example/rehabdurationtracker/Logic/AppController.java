@@ -1,15 +1,18 @@
 package com.example.rehabdurationtracker.Logic;
 
 import com.example.rehabdurationtracker.Data.Patient;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import org.hibernate.SessionFactory;
 import org.w3c.dom.Text;
+
+import java.util.Date;
+import java.util.List;
 
 public class AppController{
     private SessionFactory session;
@@ -44,10 +47,27 @@ public class AppController{
     private TextField searchById;
 
     @FXML
-    private Button getPatientFromDb;
+    private Button getPatientById;
 
     @FXML
-    private ListView listOfPatients;
+    private Button getAllPatients;
+
+    @FXML
+    private TableView<Patient> patientTable;
+
+    @FXML
+    private TableColumn<Patient, Integer> columnId;
+    @FXML
+    private TableColumn<Patient, Integer> columnAge;
+    @FXML
+    private TableColumn<Patient, Character> columnGender;
+    @FXML
+    private TableColumn<Patient, String> columnDiagnosis;
+    @FXML
+    private TableColumn<Patient, Date> columnAdmission;
+    @FXML
+    private TableColumn<Patient, Integer> columnRehabDuration;
+
 
 
     public void setSession(SessionFactory session) {
@@ -84,6 +104,24 @@ public class AppController{
             }
         });
     }
+
+    // Doesn't work yet.
+    public void getAllPatientsOnClick(){
+        PatientDao patientDao = new PatientDao();
+        List<Patient> patients = patientDao.loadAllData();
+        ObservableList<Patient> list = FXCollections.observableArrayList(patients);
+        columnId.setCellValueFactory(new PropertyValueFactory<Patient, Integer>("id"));
+        columnAge.setCellValueFactory(new PropertyValueFactory<Patient, Integer>("age"));
+        columnGender.setCellValueFactory(new PropertyValueFactory<Patient, Character>("gender"));
+        columnDiagnosis.setCellValueFactory(new PropertyValueFactory<Patient, String>("primaryDiagnosis"));
+        columnAdmission.setCellValueFactory(new PropertyValueFactory<Patient, Date>("timeOfAdmission"));
+        columnRehabDuration.setCellValueFactory(new PropertyValueFactory<Patient, Integer>("durationOfRehab"));
+        patientTable.setItems(list);
+
+    }
+
+
+
 
 
 

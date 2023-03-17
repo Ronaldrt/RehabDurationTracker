@@ -1,12 +1,22 @@
 package com.example.rehabdurationtracker;
 
+import com.example.rehabdurationtracker.Data.HibernateUtil;
+import com.example.rehabdurationtracker.Data.Patient;
 import com.example.rehabdurationtracker.Logic.AppController;
+import com.example.rehabdurationtracker.Logic.PatientDao;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+//import org.hibernate.mapping.List;
 
+import javax.persistence.criteria.CriteriaQuery;
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
 
 public class AppMain extends Application {
     @Override
