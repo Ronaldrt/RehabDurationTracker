@@ -10,6 +10,7 @@ Launch procedure:
 
 Current features:
 1) Adding a patient to the database
+2) Delete patient by ID
 2) In the app: Gender field takes in char values M or F. Primary diagnosis field examples: stroke, myocardial infarction, pneumonia etc.. Time of admission field takes in a date in the format dd-MM-yyyy.
    Initial duration of rehab field should be 10, 14 or 21 (in a real world scenario)
    
